@@ -11,8 +11,10 @@
 ejemplo de codigo
 `npm i nodemon
 `
-![alt-text](image.png)
+![alt text](image.png)
 
-emoji:blush:
+emoji :
+
+:blush:
 
 : heart_eyes:
