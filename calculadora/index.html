@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-success bg-gradient d-flex d-xxl-flex align-item-center align-item-xxl-center">
+
+<div class="container mt-5">
+<h1 class="display-1 fw-bolder text-center text-dark">Calculadora Cientifica</h1>
+    <div class="card calc-container shadow-lg border-0 bg-dark p-3 mx-auto">
+        <div class="card-body">
+
+            <input type="text" id="resultado" class="form-control mb-3 shadow-sm" placeholder="0" disabled>
+
+            <div class="row gx-2">
+                <div class="col-3"><button class="btn btn-primary btn-calc" onclick="sin()">sin</button></div>
+                <div class="col-3"><button class="btn btn-primary btn-calc" onclick="cos()">cos</button></div>
+                <div class="col-3"><button class="btn btn-primary btn-calc" onclick="rais()">√</button></div>
+                <div class="col-3"><button class="btn btn-danger btn-calc" onclick="limpiar()">AC</button></div>
+
+                <div class="col-4"><button class="btn btn-primary btn-calc" onclick="tan()">tan</button></div>
+                <div class="col-4"><button class="btn btn-primary btn-calc" onclick="log()">log</button></div>
+                <div class="col-4"><button class="btn btn-primary btn-calc" onclick="potencia()">xʸ</button></div>
+
+                <div class="col-3"><button class="btn btn-secondary btn-calc" onclick="escribirSiete()">7</button></div>
+                <div class="col-3"><button class="btn btn-secondary btn-calc" onclick="escribirOcho()">8</button></div>
+                <div class="col-3"><button class="btn btn-secondary btn-calc" onclick="escribirNueve()">9</button></div>
+                <div class="col-3"><button class="btn btn-info btn-calc" onclick="dividir()">/</button></div>
+
+                <div class="col-3"><button class="btn btn-secondary btn-calc" onclick="escribirCuatro()">4</button></div>
+                <div class="col-3"><button class="btn btn-secondary btn-calc" onclick="escribirCinco()">5</button></div>
+                <div class="col-3"><button class="btn btn-secondary btn-calc" onclick="escribirSeis()">6</button></div>
+                <div class="col-3"><button class="btn btn-info btn-calc" onclick="multiplicar()">×</button></div>
+
+                <div class="col-3"><button class="btn btn-secondary btn-calc" onclick="escribirUno()">1</button></div>
+                <div class="col-3"><button class="btn btn-secondary btn-calc" onclick="escribirDos()">2</button></div>
+                <div class="col-3"><button class="btn btn-secondary btn-calc" onclick="escribirTres()">3</button></div>
+                <div class="col-3"><button class="btn btn-info btn-calc" onclick="restar()">-</button></div>
+
+                <div class="col-3"><button class="btn btn-secondary btn-calc" onclick="escribirCero()">0</button></div>
+                <div class="col-3"><button class="btn btn-secondary btn-calc" onclick="punto()">.</button></div>
+                <div class="col-3"><button class="btn btn-secondary btn-calc" onclick="append('Math.PI')">π</button></div>
+                <div class="col-3"><button class="btn btn-info btn-calc" onclick="sumar()">+</button></div>
+                
+                <div class="col-12"><button class="btn btn-success btn-calc" onclick="igual()">=</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

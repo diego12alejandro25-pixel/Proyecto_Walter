@@ -1,0 +1,30 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reto PokéAPI</title>
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body class="bg-light">
+
+        <div class="container py-5">
+            <h1 class="text-center mb-4">PokeApp</h1>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" id="pokemonInput" class="form-control" placeholder="Nombre del Pokémon...">
+                        <button class="btn btn-primary" id="btnBuscar">Buscar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="pokemonContainer">
+                </div>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+    </html>

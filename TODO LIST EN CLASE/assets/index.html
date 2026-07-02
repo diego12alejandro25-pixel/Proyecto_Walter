@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lista de Tareas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row mt-2 p-2">
+        <div class="col">
+          <div class="container mb-2 bg bg-light p-2">
+            <h2>Agregar Tarea</h2>
+            <div class="mb-3">
+              <label for="numero_tarea" class="form-label">Numero</label>
+              <input type="number" class="form-control" id="numero_tarea" />
+            </div>
+            <div class="mb-3">
+              <label for="titulo_tarea" class="form-label"
+                >Descripcion de la Tarea</label
+              >
+              <input type="text" class="form-control" id="titulo_tarea" />
+            </div>
+            <div class="mb-3">
+              <label for="prioridad_tarea" class="form-label"
+                >Prioridad de la tarea</label
+              >
+              <select class="form-select" id="prioridad_tarea">
+                <option selected value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Baja">Baja</option>
+              </select>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onclick="agregarTarea()"
+            >
+              Agregar
+            </button>
+          </div>
+          <div class="container mb-2 bg bg-light p-2">
+            <h2>Actualizar Tareas</h2>
+            <label for="codigo_tarea" class="form-label"
+              >Ingresa el id de la tarea:</label
+            >
+            <input type="number" class="form-control" id="codigo_tarea" />
+            <button class="btn btn-primary" onclick="completarTarea()">
+              Completar Tarea
+            </button>
+            Cambiar Prioridad
+            <select class="form-select" id="nueva_prioridad">
+              <option value="Alta">Alta</option>
+              <option value="Media">Media</option>
+              <option value="Baja">Baja</option>
+            </select>
+            <button class="btn btn-primary" onclick="cambiarPrioridad()">
+              Cambiar Prioridad
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <h1>Listado de tareas</h1>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Numero</th>
+                <th scope="col">Tarea</th>
+                <th scope="col">Prioridad</th>
+                <th scope="col">Estado</th>
+              </tr>
+            </thead>
+            <tbody id="tabla_tareas"></tbody>
+          </table>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="filtrarPendientes()"
+            >
+              Filtrar Pendientes
+            </button>
+            <button type="button" onclick="verprioridad()" class="btn btn-primary">Prioridades</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

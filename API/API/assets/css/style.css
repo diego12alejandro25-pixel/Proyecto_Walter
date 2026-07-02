@@ -1,0 +1,141 @@
+body {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título */
+h1 {
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+/* Input */
+.input-group input {
+    border-radius: 50px 0 0 50px;
+    padding: 12px 20px;
+    border: none;
+}
+
+.input-group button {
+    border-radius: 0 50px 50px 0;
+    padding: 12px 25px;
+    background: #ff6b6b;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.input-group button:hover {
+    background: #ff3b3b;
+}
+
+/* Card estilo glass */
+.card {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* Hover más pro */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* Imagen */
+.card-img-top {
+    width: 140px;
+    height: 140px;
+    margin: 20px auto;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+}
+
+/* Nombre */
+.card-title {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+/* Texto */
+.card-text {
+    color: #444;
+    font-size: 0.95rem;
+}
+
+/* Contenedor para centrar mejor */
+#pokemonContainer {
+    margin-top: 20px;
+}
+
+/* Mensaje de error */
+#pokemonContainer p {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* CONTENEDOR */
+.pokemon-card {
+    perspective: 1000px;
+}
+
+/* INNER (lo que rota) */
+.pokemon-card-inner {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* HOVER = FLIP */
+.pokemon-card:hover .pokemon-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* CARAS */
+.pokemon-card-front,
+.pokemon-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+/* FRONT */
+.pokemon-card-front {
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* BACK */
+.pokemon-card-back {
+    background: rgba(255,255,255,0.9);
+    transform: rotateY(180deg);
+}
+
+/* Imagen */
+.pokemon-card-front img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+/* Texto */
+.pokemon-card h5 {
+    text-transform: capitalize;
+    font-weight: bold;
+}
